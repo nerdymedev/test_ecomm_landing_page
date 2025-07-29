@@ -10,7 +10,7 @@ const Hero = () => {
             <h1>Discover Amazing Products</h1>
             <p>Shop the latest trends and find everything you need in one place. Quality products, unbeatable prices, and fast delivery.</p>
             <div className="hero-buttons">
-              <button a href="#featured-products" className="btn btn-primary">Shop Now</button>
+              <button a href="#products" className="btn btn-primary">Shop Now</button>
               <button a href="#about" className="btn btn-secondary">Learn More</button>
             </div>
             <div className="hero-stats">
