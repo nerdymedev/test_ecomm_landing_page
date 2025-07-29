@@ -12,10 +12,10 @@ const Footer = () => {
               <p>Your trusted partner in cutting-edge technology. Shop with confidence and enjoy fast, reliable delivery for premium tech products.</p>
             </div>
             <div className="social-links">
-              <a href="#" aria-label="Facebook">📘</a>
-              <a href="#" aria-label="Twitter">🐦</a>
-              <a href="#" aria-label="Instagram">📷</a>
-              <a href="#" aria-label="LinkedIn">💼</a>
+              <a href="https://www.facebook.com/share/1AtVSCbtw8/?mibextid=wwXIfr" aria-label="Facebook" target="_blank" rel="noopener noreferrer">📘</a>
+              <a href="#" aria-label="Twitter" target="_blank" rel="noopener noreferrer">🐦</a>
+              <a href="https://www.instagram.com/lekzzy_tech/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">📷</a>
+              <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">💼</a>
             </div>
           </div>
 
@@ -55,14 +55,14 @@ const Footer = () => {
             </div>
             <div className="contact-info">
               <p>📞 +234-903-896-5452</p>
-              <p>✉️ support@lekzzytech.com</p>
+              <p>✉️ support@lekzzicon@gmail.com</p>
             </div>
           </div>
         </div>
 
         <div className="footer-bottom">
           <div className="footer-bottom-content">
-            <p>&copy; 2024 Lekzzy Tech. All rights reserved.</p>
+            <p>&copy; 2025 Lekzzy Tech. All rights reserved.</p>
             <div className="footer-links">
               <a href="#privacy">Privacy Policy</a>
               <a href="#terms">Terms of Service</a>
