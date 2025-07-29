@@ -8,8 +8,8 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-logo">
-              <h3>ShopHub</h3>
-              <p>Your one-stop destination for quality products at amazing prices. Shop with confidence and enjoy fast, reliable delivery.</p>
+              <h3>Lekzzy Tech</h3>
+              <p>Your trusted partner in cutting-edge technology. Shop with confidence and enjoy fast, reliable delivery for premium tech products.</p>
             </div>
             <div className="social-links">
               <a href="#" aria-label="Facebook">📘</a>
@@ -30,16 +30,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="footer-section">
-            <h4>Categories</h4>
-            <ul>
-              <li><a href="#electronics">Electronics</a></li>
-              <li><a href="#fashion">Fashion</a></li>
-              <li><a href="#home-garden">Home & Garden</a></li>
-              <li><a href="#sports">Sports & Outdoors</a></li>
-              <li><a href="#books">Books</a></li>
-            </ul>
-          </div>
 
           <div className="footer-section">
             <h4>Customer Service</h4>
@@ -64,15 +54,15 @@ const Footer = () => {
               <button type="submit" className="newsletter-btn">Subscribe</button>
             </div>
             <div className="contact-info">
-              <p>📞 1-800-SHOPHUB</p>
-              <p>✉️ support@shophub.com</p>
+              <p>📞 +234-903-896-5452</p>
+              <p>✉️ support@lekzzytech.com</p>
             </div>
           </div>
         </div>
 
         <div className="footer-bottom">
           <div className="footer-bottom-content">
-            <p>&copy; 2024 ShopHub. All rights reserved.</p>
+            <p>&copy; 2024 Lekzzy Tech. All rights reserved.</p>
             <div className="footer-links">
               <a href="#privacy">Privacy Policy</a>
               <a href="#terms">Terms of Service</a>

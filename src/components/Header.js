@@ -13,7 +13,7 @@ const Header = () => {
       <div className="container">
         <nav className="nav">
           <div className="logo">
-            <h2>ShopHub</h2>
+            <h2>Lekzzy Tech</h2>
           </div>
           
           <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>

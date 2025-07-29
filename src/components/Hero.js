@@ -28,24 +28,6 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="hero-image">
-            <div className="hero-placeholder">
-              <div className="product-showcase">
-                <div className="product-card">
-                  <div className="product-img">📱</div>
-                  <h4>Electronics</h4>
-                </div>
-                <div className="product-card">
-                  <div className="product-img">👕</div>
-                  <h4>Fashion</h4>
-                </div>
-                <div className="product-card">
-                  <div className="product-img">🏠</div>
-                  <h4>Home & Garden</h4>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

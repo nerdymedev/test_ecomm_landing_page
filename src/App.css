@@ -1,3 +1,10 @@
+/* Global responsive container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 .App {
   min-height: 100vh;
   display: flex;
@@ -7,6 +14,29 @@
 main {
   flex: 1;
   margin-top: 70px; /* Account for fixed header */
+}
+
+/* Responsive margin adjustments */
+@media (max-width: 768px) {
+  main {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 575px) {
+  main {
+    margin-top: 55px;
+  }
+  
+  .container {
+    padding: 0 0.75rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 0 0.5rem;
+  }
 }
 
 /* Smooth scrolling for anchor links */

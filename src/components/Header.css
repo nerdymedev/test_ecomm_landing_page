@@ -103,11 +103,37 @@
   transition: 0.3s;
 }
 
-/* Mobile Styles */
+/* Container for header */
+.nav .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Tablet and larger mobile */
+@media (max-width: 991px) {
+  .nav-links {
+    gap: 1.5rem;
+  }
+  
+  .logo h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Mobile Large */
 @media (max-width: 768px) {
+  .nav {
+    padding: 0.75rem 0;
+  }
+  
   .nav-links {
     position: fixed;
-    top: 70px;
+    top: 60px;
     left: 0;
     right: 0;
     background: white;
@@ -118,12 +144,25 @@
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
+    z-index: 999;
   }
 
   .nav-links.active {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
+  }
+  
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+  
+  .nav-links a {
+    display: block;
+    padding: 0.75rem;
+    font-size: 1.1rem;
   }
 
   .nav-actions {
@@ -137,6 +176,10 @@
   .menu-toggle {
     display: flex;
   }
+  
+  .logo h2 {
+    font-size: 1.5rem;
+  }
 
   .menu-toggle.active span:nth-child(1) {
     transform: rotate(-45deg) translate(-5px, 6px);
@@ -148,5 +191,58 @@
 
   .menu-toggle.active span:nth-child(3) {
     transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+/* Mobile Small */
+@media (max-width: 575px) {
+  .nav {
+    padding: 0.5rem 0;
+  }
+  
+  .nav .container {
+    padding: 0 0.75rem;
+  }
+  
+  .logo h2 {
+    font-size: 1.4rem;
+  }
+  
+  .nav-links {
+    top: 55px;
+    padding: 1.5rem;
+  }
+  
+  .search-btn,
+  .cart-btn {
+    font-size: 1.1rem;
+    padding: 0.4rem;
+  }
+  
+  .cart-count {
+    width: 16px;
+    height: 16px;
+    font-size: 0.7rem;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 400px) {
+  .nav .container {
+    padding: 0 0.5rem;
+  }
+  
+  .logo h2 {
+    font-size: 1.3rem;
+  }
+  
+  .nav-actions {
+    gap: 0.25rem;
+  }
+  
+  .search-btn,
+  .cart-btn {
+    font-size: 1rem;
+    padding: 0.3rem;
   }
 }

@@ -1,63 +1,83 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './FeaturedProducts.css';
+import { configureProductImages } from '../utils/imageUtils';
 
 const FeaturedProducts = () => {
-  const products = [
+  // Component to handle image loading with fallback
+  const ProductImage = ({ src, alt, fallbackEmoji = '📱' }) => {
+    const [imageError, setImageError] = useState(false);
+    
+    if (imageError) {
+      return <span className="product-emoji">{fallbackEmoji}</span>;
+    }
+    
+    return (
+      <img 
+        src={src} 
+        alt={alt} 
+        className="product-image-img"
+        onError={() => setImageError(true)}
+        onLoad={() => setImageError(false)}
+      />
+    );
+  };
+
+  // Product data with explicit image paths using dashes
+  const rawProducts = [
     {
       id: 1,
-      name: 'Wireless Headphones',
-      price: '$99.99',
-      originalPrice: '$149.99',
-      image: '🎧',
+      name: 'iPhone 13 Promax',
+      price: '#630,000',
+      originalPrice: '#700,000',
+      image: '/images/products/iphone-13-promax.jpg',
+      fallbackEmoji: '📱',
       rating: 4.8,
-      discount: '33% OFF'
+      discount: '10% OFF'
     },
     {
       id: 2,
-      name: 'Smart Watch',
-      price: '$199.99',
-      originalPrice: '$299.99',
-      image: '⌚',
+      name: 'Locked iPhone 16',
+      price: '#810,000',
+      originalPrice: '#900,000',
+      image: '/images/products/locked-iphone-16.jpg',
+      fallbackEmoji: '📱',
       rating: 4.6,
-      discount: '33% OFF'
-    },
-    {
-      id: 3,
-      name: 'Premium Sneakers',
-      price: '$79.99',
-      originalPrice: '$120.00',
-      image: '👟',
-      rating: 4.9,
-      discount: '33% OFF'
+      discount: '10% OFF'
     },
     {
       id: 4,
-      name: 'Coffee Maker',
-      price: '$129.99',
-      originalPrice: '$180.00',
-      image: '☕',
+      name: 'iPhone 12',
+      price: '#351,000',
+      originalPrice: '#390,000',
+      image: '/images/products/iphone-12.jpg',
+      fallbackEmoji: '📱',
       rating: 4.7,
-      discount: '28% OFF'
+      discount: '10% OFF'
     },
     {
       id: 5,
-      name: 'Laptop Backpack',
-      price: '$49.99',
-      originalPrice: '$75.00',
-      image: '🎒',
+      name: 'iPhone 11',
+      price: '#324,000',
+      originalPrice: '#360,000',
+      image: '/images/products/iphone-11.jpg',
+      fallbackEmoji: '📱',
       rating: 4.5,
-      discount: '33% OFF'
+      discount: '10% OFF'
     },
     {
       id: 6,
-      name: 'Gaming Mouse',
-      price: '$59.99',
-      originalPrice: '$89.99',
-      image: '🖱️',
+      name: 'PS5 slim',
+      price: '#770,000',
+      originalPrice: '1,100,000',
+      image: '/images/products/ps5-slim.jpg',
+      fallbackEmoji: '🎮',
       rating: 4.8,
-      discount: '33% OFF'
+      discount: '30% OFF'
     }
   ];
+
+  // Configure products with images and fallback emojis
+  const products = configureProductImages(rawProducts);
 
   const renderStars = (rating) => {
     const stars = [];
@@ -93,7 +113,11 @@ const FeaturedProducts = () => {
             <div key={product.id} className="product-card">
               <div className="product-badge">{product.discount}</div>
               <div className="product-image">
-                <span className="product-emoji">{product.image}</span>
+                <ProductImage 
+                  src={product.image} 
+                  alt={product.name}
+                  fallbackEmoji={product.fallbackEmoji}
+                />
                 <div className="product-overlay">
                   <button className="quick-view-btn">Quick View</button>
                   <button className="add-to-cart-btn">Add to Cart</button>
